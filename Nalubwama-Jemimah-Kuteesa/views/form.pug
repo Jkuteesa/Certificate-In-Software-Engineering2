@@ -1,0 +1,85 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='../styles.css')
+  title registration form
+  style.
+    /* CSS to style the inclined line */
+    .horizontal-line {
+    width: 100%; /* the line span the width of its container */
+    height: 5px; /*  the height (thickness) of the line */
+    background-color: grey; /* Line color */
+    /* transform: rotate(-45deg); Rotate the line by -45 degrees */
+    transform-origin: left to right; /* Set the rotation origin */
+    }
+.container 
+  .title(style='color: grey;') Bio Data
+  .horizontal-line
+  form#formid(name='registration' action='/api/regform' onsubmit='return Validate(event)' method='POST')
+    .user__details
+      .input__box
+        span.details
+          label(for='fname')
+        input#fname(type='text' name='fname' placeholder='first name')
+        span#fname-error
+.input__box
+  span.details
+    label(for='lname')  
+  input#lname(type='text' name='lname' placeholder='Last name')
+  span#lname-error
+.input__box
+  span.details
+    label(for='date')
+  input#date(type='text' name='date' placeholder='Date of birth(DD/MM/YYYY)')
+  span#date-error
+.input__box
+  span.details
+    label(for='gender')  
+  select#gender(name='gender')
+    option(value='')
+    option(value='Male') Male
+    option(value='Female') Female
+  span#gender-error(placeholder='Gender')
+.title(style='color: grey;') Location
+.horizontal-line
+.input__box
+  span.details
+    label(for='country')
+  input#country(type='text' name='country' placeholder='country')
+  span#country-error
+.input__box
+  span.details
+    label(for='state')
+  input#state(type='text' name='state' placeholder='state/district')
+  span#state-error
+.input__box
+  span.details
+    label(for='town')
+  input#town(type='text' name='town' placeholder='town')
+  span#town-error
+.input__box
+  span.details
+    label(for='zip')
+  input#zip(type='text' name='zip' placeholder='Zip code')
+  span#zip-error
+.title(style='color: grey;') Contact and Address
+.horizontal-line
+.input__box 
+  span.details
+    label(for='contact1')
+  input#contact1(type='text' name='contact1' placeholder='Phone Number 1')
+  span#contact1-error
+.input__box
+  span.details
+    label(for='contact2')
+  input#contact2(type='text' name='contact2' placeholder='Phone Number 2')
+  span#contact2-error
+.input__box
+  span.details
+    label(for='email')
+  input#email(type='text' name='contact' placeholder='email')
+  span#email-error
+.button
+  input(type='submit' value='Register')
+script(src='/script.js')

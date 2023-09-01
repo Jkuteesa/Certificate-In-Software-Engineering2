@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+  <title>registration form</title>
+  <style>
+    /* CSS to style the inclined line */
+    .horizontal-line {
+        width: 100%; /* Make the line span the width of its container */
+        height: 5px; /* Set the height (thickness) of the line */
+        background-color: gray; /* Line color */
+        /* transform: rotate(-45deg); Rotate the line by -45 degrees */
+        transform-origin: left to right; /* Set the rotation origin */
+    }
+</style>
+</head>
+<body>
+    
+<div class="container">
+  <div class="title" style="color: grey;">Bio Data</div>
+  <div class="horizontal-line"></div>
+  <form id="formid" name="registration" action="/api/form" onsubmit="return Validate(event)" method="POST">
+    <div class="user__details">
+      <div class="input__box"><span class="details">
+          <label for="fname"></label></span>
+        <input id="fname" type="text" name="fname" placeholder="first name"><span id="fname-error">
+        </body></span>
+      </div>
+      <div class="input__box"> <span class="details">
+          <label for="lname"> </label></span>
+        <input id="lname" type="text" name="lname" placeholder="Last name">
+     <span id="lname-error"></span>
+      </div>
+    
+      <div class="input__box"><span class="details">
+          <label for="date"></label></span>
+        <input id="date" type="text" name="date" placeholder="Date of birth(DD/MM/YYYY)"><span id="date-error"></span>
+      </div>
+      <div class="input__box"><span class="details">
+        <label for="gender"> </label></span>
+      <select id="gender" name="gender">
+        <option value=""></option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+      </select><span id="gender-error" placeholder="Gender"></span>
+    </div>
+    <div class="title" style="color: grey;">Location</div>
+    <div class="horizontal-line"></div>
+    <div class="input__box"><span class="details">
+        <label for="country"></label></span>
+        <input id="country" type="text" name="country" placeholder="country"><span id="country-error"></span>
+    </div>
+      <div class="input__box"><span class="details">
+          <label for="state"></label></span>
+        <input id="state" type="text" name="state" placeholder="state/district"><span id="state-error"></span>
+      </div>
+      <div class="input__box"><span class="details"> 
+          <label for="town"></label></span>
+        <input id="town" type="text" name="town" placeholder="town"><span id="town-error"></span>
+      </div>
+      <div class="input__box"><span class="details">
+        <label for="zip"></label></span>
+        <input id="zip" type="text" name="zip" placeholder="Zip code"><span id="zip-error"></span>
+    </div>
+    <div class="title" style="color: grey;">Contact and Address</div>
+  <div class="horizontal-line"></div>
+    <div class="input__box"><span class="details">
+        <label for="contact1"></label></span>
+        <input id="contact1" type="text" name="contact1" placeholder="Phone Number 1"><span id="contact1-error"></span>
+    </div>
+    <div class="input__box"><span class="details">
+        <label for="contact2"></label></span>
+        <input id="contact2" type="text" name="contact2" placeholder="Phone Number 2"><span id="contact2-error"></span>
+    </div>
+    <div class="input__box"><span class="details">
+        <label for="email"></label></span>
+        <input id="email" type="text" name="contact" placeholder="email"><span id="email-error"></span>
+    </div>
+    <div class="button">
+      <input type="submit" value="Register">
+    </div>
+  </form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>
